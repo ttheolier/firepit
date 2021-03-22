@@ -1,0 +1,5 @@
+.dailySpark{
+    flex: 0.25;
+    /*for visualizing compartments*/
+    border-right: 1px solid black;
+}

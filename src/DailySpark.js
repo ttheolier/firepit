@@ -1,9 +1,10 @@
 import React from "react";
+import './DailySpark.css';
 
 function DailySpark() {
     return(
         <div className = "dailySpark">
-            <h1>Daily Spark will go here</h1>
+            <h1>Daily Spark</h1>
         </div>
     );
 }

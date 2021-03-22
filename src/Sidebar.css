@@ -1,5 +1,7 @@
 .sidebar{
     border-right: 1px solid black;
     flex: 0.25;
-    min-width: 300px;
+    /*min-width: 300px;*/
+    /*for visualizing compartments*/
+    border-left: 1px solid black;
 }
