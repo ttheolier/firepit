@@ -1,4 +1,9 @@
 .pit{
-    border-right: 1px solid black;
+    /*border-right: 1px solid black;*/
     flex:0.5;
+    background-color: rgb(233, 219, 219);
+}
+
+.pitheader{
+    text-align: center;
 }

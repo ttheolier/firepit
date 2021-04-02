@@ -5,7 +5,9 @@ function Pit(){
     return(
         <div className = "pit">
             {/*pit*/}
-            <h1>FirePit</h1>
+            <div className = "pitheader">
+                <h1>FirePit</h1>
+            </div>
         </div>
     );
 }
