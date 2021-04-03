@@ -1,5 +1,6 @@
 import React from "react";
 import './Pit.css';
+import Spark from './Spark';
 
 function Pit(){
     return(
@@ -8,6 +9,7 @@ function Pit(){
             <div className = "pitheader">
                 <h1>FirePit</h1>
             </div>
+            <Spark />
         </div>
     );
 }

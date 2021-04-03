@@ -2,6 +2,12 @@
     /*border-right: 1px solid black;*/
     flex:0.5;
     background-color: rgb(233, 219, 219);
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.pit::-webkit-scrollbar{
+    display: none;
 }
 
 .pitheader{
