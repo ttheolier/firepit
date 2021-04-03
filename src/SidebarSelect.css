@@ -4,7 +4,7 @@
 }
 
 .sidebarSelect:hover {
-    background-color:rgb(180, 180, 180);
+    background-color:rgb(218, 214, 214);
     border-radius: 20px;
     color:rgb(255, 0, 0);
     transition: color 150ms ease-out;

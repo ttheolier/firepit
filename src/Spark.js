@@ -2,6 +2,7 @@ import React from 'react';
 import "./Spark.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 //import imge from "https://miro.medium.com/max/1050/1*w0VoRKGkrDx8BQt_kY_CbQ.jpeg";
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +33,7 @@ function Spark(){
                     </Avatar>
                     <input placeholder = "Create your spark..." type></input>
                 </div>
+                <Button>Post</Button>
             </form>
 
         </div>

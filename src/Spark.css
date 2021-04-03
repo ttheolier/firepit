@@ -1,3 +1,33 @@
-.spark{
+.spark > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.sparkInput{
+    display: flex;
+    margin-left: 5px;
+}
+
+.sparkInput>input{
+    flex: 1.0;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 230);
+}
+
+.spark>form>Button{
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: grey;
+    /*color: red;*/
+    margin-right: 5px;
+    margin-left: auto;
+    height: 20px;
+    width: 40px;
+    margin-top: 5px;
+    /*padding:5px;*/
 
 }
