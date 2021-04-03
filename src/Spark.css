@@ -1,6 +1,8 @@
 .spark > form{
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid gray;
 }
 
 .sparkInput{
@@ -10,12 +12,25 @@
 
 .sparkInput>input{
     flex: 1.0;
-    margin-left: 10px;
-    margin-right: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
     padding: 20px;
     border: none;
     border-radius: 15px;
     background-color: rgb(230, 230, 230);
+    min-height: fit-content;
+}
+
+.sparkInput>textarea{
+    flex: 1.0;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 230);
+    resize:none;
+    /*min-height: fit-content;*/
 }
 
 .spark>form>Button{
@@ -23,11 +38,12 @@
     border-radius: 20px !important;
     background-color: grey;
     /*color: red;*/
-    margin-right: 5px;
-    margin-left: auto;
-    height: 20px;
-    width: 40px;
+    margin-right: 8px !important;
+    margin-left: auto !important;
+    height: 20px !important;
+    width: 40px !important;
     margin-top: 5px;
+    margin-bottom: 5px;
     /*padding:5px;*/
 
 }
