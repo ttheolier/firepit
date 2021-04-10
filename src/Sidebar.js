@@ -14,7 +14,7 @@ function Sidebar() {
             {/*Profile */}
             <SidebarSelect text = "Profile"/>
 
-            
+            <SidebarSelect text = "About"/>
 
             {/*Spark Button: placeholder currently */}
             <SidebarSelect text = "Spark"/>

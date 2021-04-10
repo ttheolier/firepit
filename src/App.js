@@ -1,23 +1,12 @@
-import React from "react";
-import './App.css';
-import Sidebar from "./Sidebar";
-import Pit from "./Pit";
-import DailySpark from "./DailySpark";
-
+import React from 'react';
+import Main from "./Main";
 function App() {
-  return (
-    <div className="app">
+    return (
+      <div className="App">
+        {/*<Navbar />*/}
+        <Main />
+      </div>
+    );
+  }
 
-      {/*Sidebar */}
-      <Sidebar/>
-
-      {/*Pit */}
-      <Pit />
-
-      {/*DailySpark */}
-      <DailySpark />
-    </div>
-  );
-}
-
-export default App;
+  export default App;
