@@ -2,8 +2,12 @@
     border-right: 1px solid rgb(119, 119, 119);
     flex:0.5;
     /*background-color: rgb(233, 219, 219);*/
-    min-width: fit-content;
+    /*min-width: fit-content;*/
     overflow-y: scroll;
+}
+
+.pitTop{
+    min-width: fit-content;
 }
 
 .pit::-webkit-scrollbar{

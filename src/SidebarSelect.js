@@ -2,10 +2,10 @@ import React from "react";
 import './SidebarSelect.css';
 import Button from '@material-ui/core/Button';
 
-function SidebarSelect({text}){
+function SidebarSelect({Icon,text}){
     return(
         <div className = "sidebarSelect">
-            <Button size = "large" target="_blank" href="about">{text}</Button>
+            <Button size = "large" target="_blank" href={text} startIcon = {<Icon/>}>{text}</Button>
         </div>
     )
 }
