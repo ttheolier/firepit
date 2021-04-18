@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(7),
       height: theme.spacing(7),
     },
+
+    verylarge: {
+        width: theme.spacing(14),
+        height: theme.spacing(14),
+    }
   }));
 
 function Spark(){
