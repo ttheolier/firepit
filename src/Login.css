@@ -1,0 +1,40 @@
+a {text-decoration:none!important;}
+
+.login{
+    background-color: grey;
+    min-width: 200px;
+    min-height:400px;
+    max-width: 200px;
+    max-height:400px;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top:7%;
+}
+
+.navbar{
+    background-color: black;
+    max-height:40px;
+    min-height:40px;
+    border-bottom: 1px solid black;
+}
+
+.navbar>loginNav{
+    border:1px solid black;
+    color:white;
+}
+
+.navbar>a{
+	text-decoration:none;
+	float:left;
+	font-size: 18px;
+  	color: white;
+  	text-align:center;
+  	padding: 5px;
+    /*border-right: 1px solid white;*/
+}
+
+.navbar>a:hover
+{
+	cursor: pointer;
+    color: turquoise;
+}
