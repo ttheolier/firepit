@@ -5,6 +5,7 @@ import Home from '../src/Home';
 import About from '../src/About';
 import Login from '../src/Login';
 import Profile from '../src/Profile';
+import Register from '../src/Register'
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       {<Route exact path="/about" component={About}></Route>}
       {<Route exact path="/home" component={Home}></Route>}
       {<Route exact path="/profile" component={Profile}></Route>}
+      {<Route exact path="/register" component={Register}></Route>}
     </Switch>
   );
 }
