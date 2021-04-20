@@ -29,8 +29,13 @@ function DailyBox({text}) {
                     <Avatar src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HykeemCarterSittingDown.jpg/330px-HykeemCarterSittingDown.jpg" className={classes.large}>
                     </Avatar>
                 </div>
-                <div className = "text">
-                    <p1>{text}</p1>
+                <div className = "rightBoxElements">
+                  <div className = "usernameTime">
+                    <p>@ThomasT123 4/19/2021</p>
+                  </div>
+                  <div className = "text">
+                      <p1>{text}</p1>
+                  </div>
                 </div>
         </div>
     )

@@ -7,6 +7,10 @@
     padding: 0 10px;
 }
 
+.profileSide{
+    flex:0.75;
+}
+
 .info{
     display:flex;
     margin-top:100px;
@@ -14,5 +18,23 @@
 }
 
 .info>h1{
-    margin-left: 15px;
+    /*margin-left: 15px;*/
+}
+
+.rightside{
+    display: flex;
+    flex-direction: column;
+    margin-left:15px;
+}
+
+.sparkFeed{
+    /*display:flex;*/
+    /*flex-direction: column;*/
+    max-width:65%;
+    margin-left: 5px;
+}
+
+.sparkFeed>h1{
+    padding-top: 7px;
+    padding-bottom: 7px;
 }

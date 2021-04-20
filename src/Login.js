@@ -7,8 +7,8 @@ function Login(){
         <div className = "login">
             <div className = "navbar">
             {/*<Button size = "small" target="_blank" href="Login" className = "loginNav" style={{justifyContent: "flex-start"}} fullHeight = {true}>Login</Button>*/}
-            <a href = "Login">Login</a>
-            <a href = "Register">Register</a>
+                <a href = "Login">Login</a>
+                <a href = "Register">Register</a>
             </div>
             
         </div>
