@@ -20,18 +20,18 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-function DailyBox({text}) {
+function DailyBox({text,avat,username,name,date}) {
     const classes = useStyles();
 
     return(
         <div className = "dailyBox">
                 <div className = "avatar">
-                    <Avatar src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HykeemCarterSittingDown.jpg/330px-HykeemCarterSittingDown.jpg" className={classes.large}>
+                    <Avatar src = {avat} className={classes.large}>
                     </Avatar>
                 </div>
                 <div className = "rightBoxElements">
                   <div className = "usernameTime">
-                    <p>@ThomasT123 4/19/2021</p>
+                    <p>@{username} {date}</p>
                   </div>
                   <div className = "text">
                       <p1>{text}</p1>

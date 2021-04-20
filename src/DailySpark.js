@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import './DailySpark.css';
 import DailyBox from './DailyBox';
+import db from './firebase';
 
 function DailySpark() {
     return(

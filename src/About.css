@@ -4,14 +4,17 @@
     padding: 0;
     max-width: 1300px;
     border-right: 1px solid grey;
+    
 }
 .about_description{
     flex: .75;
     /*padding: 10px;*/
+    /*background-color: grey;*/
 }
 
 .about_description>h1{
     /*background-color: turquoise;*/
+    /*background-color:powderblue;*/
 }
 
 .about_description>h2{
