@@ -11,7 +11,7 @@ function Home() {
     return(
       <div className = "home">
       {/*Sidebar */}
-      <Sidebar/>
+      <Sidebar auth = {false}/>
 
       {/*Pit */}
       <Pit auth = {false}/>
@@ -28,7 +28,7 @@ function Home() {
       <div className="home">
 
         {/*Sidebar */}
-        <Sidebar/>
+        <Sidebar auth = {true}/>
 
         {/*Pit */}
         <Pit auth = {true}/>
