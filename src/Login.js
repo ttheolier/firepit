@@ -12,6 +12,7 @@ function Login(){
     let history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    //const [user,setUser] = useState();
 
     const Login = (e) => {
         e.preventDefault();
@@ -21,6 +22,8 @@ function Login(){
             // Signed in
             var user = userCredential.user;
             console.log(user);
+            //const user = { username, password };
+            localStorage.setItem('user', email);
             history.push("/home");
             // ...
         })

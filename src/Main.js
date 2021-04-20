@@ -11,10 +11,10 @@ const Main = () => {
   return (
     <Switch> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path="/" component={Login}></Route>
-      {<Route exact path="/about" component={About}></Route>}
-      {<Route exact path="/home" component={Home}></Route>}
-      {<Route exact path="/profile" component={Profile}></Route>}
-      {<Route exact path="/register" component={Register}></Route>}
+      <Route exact path="/about" component={About}></Route>
+      <Route exact path="/home" component={Home}></Route>
+      <Route exact path="/profile" component={Profile}></Route>
+      <Route exact path="/register" component={Register}></Route>
     </Switch>
   );
 }

@@ -37,7 +37,7 @@ function Spark(){
                     <Avatar src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HykeemCarterSittingDown.jpg/330px-HykeemCarterSittingDown.jpg" className={classes.large}>
                     </Avatar>
                     {/*<input placeholder = "Create your spark..." type></input>*/}
-                    <textarea placeholder = "Create your spark..." type name="text" rows="3" cols="10" wrap="soft"></textarea>
+                    <textarea placeholder = "Create your spark..." name="text" rows="3" cols="10" wrap="soft"></textarea>
                 </div>
                 <Button>Post</Button>
             </form>

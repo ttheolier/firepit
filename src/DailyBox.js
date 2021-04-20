@@ -34,7 +34,7 @@ function DailyBox({text,avat,username,name,date}) {
                     <p>@{username} {date}</p>
                   </div>
                   <div className = "text">
-                      <p1>{text}</p1>
+                      <p>{text}</p>
                   </div>
                 </div>
         </div>
