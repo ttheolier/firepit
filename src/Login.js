@@ -51,7 +51,7 @@ function Login(){
                     <input onChange={(e) => setPassword(e.target.value)} type="text" id="password" name="password" value = {password}></input><br/>
                 </div>
                 <div className = "subButtons">
-                    <Button variant = "contained">guest</Button>
+                    <Button href = "/home" variant = "contained">guest</Button>
                     <div className = "loginButton">
                         <Button variant = "contained" onClick = {Login}>Login</Button>
                     </div>

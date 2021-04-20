@@ -9,12 +9,12 @@ function Home() {
   if (loggedInUser === null)
   {
     return(
-      <div>
+      <div className = "home">
       {/*Sidebar */}
       <Sidebar/>
 
       {/*Pit */}
-      <Pit />
+      <Pit auth = {false}/>
 
       {/*DailySpark */}
       <DailySpark />
@@ -22,19 +22,22 @@ function Home() {
       </div>
     )
   }
-  return (
-    <div className="home">
+  else
+  {
+    return (
+      <div className="home">
 
-      {/*Sidebar */}
-      <Sidebar/>
+        {/*Sidebar */}
+        <Sidebar/>
 
-      {/*Pit */}
-      <Pit />
+        {/*Pit */}
+        <Pit auth = {true}/>
 
-      {/*DailySpark */}
-      <DailySpark />
-    </div>
-  );
+        {/*DailySpark */}
+        <DailySpark />
+      </div>
+    );
+  }
 }
 
 export default Home;
