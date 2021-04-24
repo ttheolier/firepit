@@ -4,9 +4,11 @@ import Button from '@material-ui/core/Button';
 import db from "./firebase";
 import firebase from "firebase/app";
 import "firebase/auth";
+import { useHistory } from "react-router-dom";
 
 
 function Register(){
+    let history = useHistory();
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -19,13 +21,17 @@ function Register(){
                 // Signed in 
                 var user = userCredential.user;
                 console.log("Succesful register!")
+                localStorage.setItem('user', email);
                 // ...
-                /*db.collection("accounts").add({
-                email: username,
+                db.collection("accounts").add({
+                bio: "Create a bio!",
+                avatar: "",
+                email: email,
                 username: username,
                 name: name,
                 password: password,
-                });*/
+                });
+                history.push("/home");
             })
             .catch((error) => {
                 var errorCode = error.code;
