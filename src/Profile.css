@@ -32,6 +32,20 @@
     margin-left:15px;
 }
 
+.changeAvatar{
+    display:flex;
+    flex-direction: row;
+}
+
+.avatarButton{
+    padding-top:7px;
+    padding-left:20px;
+}
+
+.avatarButton>Button{
+    background-color:turquoise;
+}
+
 .sparkFeed{
     /*display:flex;*/
     /*flex-direction: column;*/

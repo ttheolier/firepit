@@ -128,7 +128,12 @@ function Profile(){
                     ))}
                     {/*<Avatar id = "avatar" src = {avatar} className={classes.veryLarge}></Avatar>*/}
                     <div className = "rightside">
-                      <h1 id = "username"></h1>
+                      <div className = "changeAvatar">
+                        <h1 id = "username"></h1>
+                        <div className = "avatarButton">
+                          <Button>change avatar</Button>
+                        </div>
+                      </div>
                       <h2 id = "name"></h2>
                       <p id = "bio"></p>
                     </div>
