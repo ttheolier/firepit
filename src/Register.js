@@ -18,7 +18,14 @@ function Register(){
             .then((userCredential) => {
                 // Signed in 
                 var user = userCredential.user;
+                console.log("Succesful register!")
                 // ...
+                /*db.collection("accounts").add({
+                email: username,
+                username: username,
+                name: name,
+                password: password,
+                });*/
             })
             .catch((error) => {
                 var errorCode = error.code;
