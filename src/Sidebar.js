@@ -7,8 +7,25 @@ import OfflineBoltOutlinedIcon from '@material-ui/icons/OfflineBoltOutlined';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import { Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 function Sidebar({auth}) {
+    let history = useHistory();
+
+    const Logout = (e) => {
+        e.preventDefault();
+
+        firebase.auth().signOut().then(() => {
+            // Sign-out successful.
+            localStorage.clear();
+            history.push("/");
+          }).catch((error) => {
+            // An error happened.
+          });
+    }
+
     if (auth === true)
     {
         return(
@@ -33,6 +50,8 @@ function Sidebar({auth}) {
 
                 {/*Spark Button: placeholder currently */}
                 <SidebarSelect Icon={OfflineBoltOutlinedIcon} text = "spark" link = "spark"/>
+
+                <Button variant = "contained" onClick = {Logout}>logout</Button>
                 
 
             </div>
