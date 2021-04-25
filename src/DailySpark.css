@@ -8,3 +8,11 @@
 .dsHeader{
     text-align: center;
 }
+.gifHeader{
+text-align: center;
+
+}
+.searchboxWrapper{
+        flex: 1.5;
+  right: 10px;
+}
