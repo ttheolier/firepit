@@ -12,6 +12,7 @@ function DailySpark() {
         db.collection("posts").onSnapshot((snapshot) =>
             setPosts(snapshot.docs.map((doc) => doc.data()))
         );
+
     }, []);
     return (
         <div className="dailySpark">
@@ -29,23 +30,41 @@ function DailySpark() {
                     />
                 ))}
             </div>
+            <form name="DailySpark" method="GET" action="servlet">
 
-            <div className="gifLogic">
-                < div className="gifHeader">
-                    <h1>GIF Search</h1>
-                </div>
-                <div className="searchboxWrapper">
-                    <ReactGiphySearchbox
-                        apiKey="9Ixlv3DWC1biJRI57RanyL7RTbfzz0o7"
-                        onSelect={(item) => console.log(item)}
-                        masonryConfig={[
-                            { columns: 2, imageWidth: 110, gutter: 5 },
-                            { mq: "700px", columns: 3, imageWidth: 120, gutter: 5 }
-                        ]}
-                    />
-                </div>
+                <div className="gifLogic">
+                    < div className="gifHeader">
+                        <h1>GIF Search</h1>
+                    </div>
+                    <div className="searchboxWrapper">
+                        <ReactGiphySearchbox
+                            apiKey="9Ixlv3DWC1biJRI57RanyL7RTbfzz0o7"
+                            onSelect={(item) => console.log(item)
+                                .then(response => response.json())
+                                .then(json => {
+                                    json.data
+                                        .map(gif => gif.images.fixed_height.url)
+                                        .forEach(url => {
+                                            let img = document.createElement('img')
+                                            img.src = url
+                                            document.body.appendChild(img)
+                                        })
+                                })
+                                .catch(error => document.body.appendChild = error)
+                            }
+                            masonryConfig={[
+                                { columns: 2, imageWidth: 110, gutter: 5 },
+                                { mq: "700px", columns: 3, imageWidth: 300, gutter: 5 }
+                            ]}
+                        />
+                    </div>
+                    <div className="gifLookup">
+                        <input type="submit" value="Submit" />
+                    </div>
 
-            </div>
+                </div>
+            </form>
+
         </div>
 
 
