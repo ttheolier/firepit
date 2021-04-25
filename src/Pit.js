@@ -6,12 +6,20 @@ import db from './firebase';
 
 function Pit({auth}){
     const [posts,setPosts] = useState([]);
+    const [users,setUsers] = useState([]);
+    var email = localStorage.getItem('user');
 
-        useEffect(()=>{
-            db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot)=> 
-            setPosts(snapshot.docs.map((doc)=>doc.data()))
+    useEffect(()=>{
+        db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot)=> 
+        setPosts(snapshot.docs.map((doc)=>doc.data()))
+        );
+        if (auth == true)
+        {
+            db.collection("accounts").where("email", "==", email).onSnapshot((snapshot)=> 
+            setUsers(snapshot.docs.map((doc)=>doc.data()))
             );
-        }, []);
+        }
+    }, []);
     if (auth===true)
     {
         return(
@@ -21,7 +29,13 @@ function Pit({auth}){
                     <div className = "pitheader">
                         <h1>FirePit</h1>
                     </div>
-                    <Spark />
+                    {/*only should be one matching user in db, so splicing is fine*/}
+                    {users.slice(0,1).map(post =>(
+                        <Spark
+                        avatar = {post.avatar}
+                        />
+                    ))}
+                    {/*<Spark />*/}
                 </div>
                 <div className = "pitMain">
                     {posts.map(post =>(

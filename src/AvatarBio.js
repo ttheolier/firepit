@@ -43,6 +43,7 @@ function Avatar(){
             <input onChange={(e) => setBio(e.target.value)} type="text" id="bio" name="bio" value = {bio}></input><br/>
             <Button style={{backgroundColor: "turquoise"}} variant = "contained" backgroundColor = "turquoise" onClick = {HandleSubmit} >Submit</Button>
             <Button style={{backgroundColor: "red"}} variant = "contained" backgroundColor = "turquoise" href = "profile" >Cancel</Button>
+            
         </div>
     )
 }

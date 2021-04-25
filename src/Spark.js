@@ -27,14 +27,14 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-function Spark(){
+function Spark({avatar}){
     const classes = useStyles();
 
     return(
         <div className = "spark">
             <form>
                 <div className = "sparkInput">
-                    <Avatar src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HykeemCarterSittingDown.jpg/330px-HykeemCarterSittingDown.jpg" className={classes.large}>
+                    <Avatar src = {avatar} /*"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HykeemCarterSittingDown.jpg/330px-HykeemCarterSittingDown.jpg"*/ className={classes.large}>
                     </Avatar>
                     {/*<input placeholder = "Create your spark..." type></input>*/}
                     <textarea placeholder = "Create your spark..." name="text" rows="3" cols="10" wrap="soft"></textarea>
