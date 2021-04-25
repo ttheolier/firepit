@@ -13,6 +13,19 @@ text-align: center;
 
 }
 .searchboxWrapper{
-        flex: 1.5;
-  right: 10px;
+    /*max-height:150px;*/
+    /*flex: 1.5;*/
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*right: 10px;*/
+    padding-left: 10px;
+    justify-content: center;
 }
+
+.gifLookup{
+    padding-left: 10px;
+}
+
+/*.giphy{
+    margin-left: auto;
+}*/

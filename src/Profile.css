@@ -9,6 +9,7 @@
 
 .profileSide{
     flex:0.75;
+    overflow-y: scroll;
 }
 
 .info{

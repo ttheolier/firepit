@@ -38,6 +38,8 @@ function DailySpark() {
                     </div>
                     <div className="searchboxWrapper">
                         <ReactGiphySearchbox
+                            className = "giphy"
+                            gifListHeight = "150px"
                             apiKey="9Ixlv3DWC1biJRI57RanyL7RTbfzz0o7"
                             onSelect={(item) => console.log(item)
                                 .then(response => response.json())
@@ -53,8 +55,8 @@ function DailySpark() {
                                 .catch(error => document.body.appendChild = error)
                             }
                             masonryConfig={[
-                                { columns: 2, imageWidth: 110, gutter: 5 },
-                                { mq: "700px", columns: 3, imageWidth: 300, gutter: 5 }
+                                { columns: 2, imageWidth: 100, gutter: 5 },
+                                { mq: "25%", columns: 1, imageWidth: 300, gutter: 5 }
                             ]}
                         />
                     </div>
