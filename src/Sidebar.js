@@ -51,7 +51,7 @@ function Sidebar({auth}) {
                 {/*Spark Button: placeholder currently */}
                 <SidebarSelect Icon={OfflineBoltOutlinedIcon} text = "spark" link = "spark"/>
 
-                <Button variant = "contained" onClick = {Logout}>logout</Button>
+                <Button variant = "contained" onClick = {Logout} /*fullWidth = {true}*/>logout</Button>
                 
 
             </div>
@@ -76,7 +76,7 @@ function Sidebar({auth}) {
                 <SidebarSelect Icon = {Home} text = "home" link = "home"/>
             
                 {/*Profile */}
-                <SidebarSelect Icon = {AccountCircleOutlinedIcon} text = "profile" link = "/"/>
+                <SidebarSelect Icon = {AccountCircleOutlinedIcon} text = "profile" link = "/" /*onClick = {alert("You need to be logged in to use tis feature!")}*//>
 
                 <SidebarSelect Icon = {InfoOutlinedIcon} text = "about" link = "about"/>
 

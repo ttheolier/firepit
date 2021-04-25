@@ -23,7 +23,7 @@ function Register(){
                 console.log("Succesful register!")
                 localStorage.setItem('user', email);
                 // ...
-                db.collection("accounts").add({
+                db.collection("accounts").doc(email).set({
                 bio: "Create a bio!",
                 avatar: "",
                 email: email,

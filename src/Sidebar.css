@@ -10,4 +10,5 @@
 
 .sidebar>Button{
     background-color: turquoise;
+    min-width:50%;
 }

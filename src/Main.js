@@ -6,6 +6,7 @@ import About from '../src/About';
 import Login from '../src/Login';
 import Profile from '../src/Profile';
 import Register from '../src/Register'
+import AvatarBio from '../src/AvatarBio'
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/profile" component={Profile}></Route>
       <Route exact path="/register" component={Register}></Route>
+      <Route exact path="/avatarbio" component={AvatarBio}></Route>
     </Switch>
   );
 }
