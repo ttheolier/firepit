@@ -50,9 +50,9 @@ function Sidebar({auth}) {
 
                 {/*Spark Button: placeholder currently */}
                 <SidebarSelect Icon={OfflineBoltOutlinedIcon} text = "spark" link = "spark"/>
-
-                <Button variant = "contained" onClick = {Logout} /*fullWidth = {true}*/>logout</Button>
-                
+                <div className = "signOut">
+                <Button variant = "contained" onClick = {Logout} fullWidth = {true}>logout</Button>
+                </div>
 
             </div>
 

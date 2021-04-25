@@ -3,12 +3,19 @@
     flex: 0.25;
     /*min-width: 300px;*/
     /*for visualizing compartments*/
-    /*border-left: 1px solid black;*/
+    border-left: 2px solid rgb(119, 119, 119);
     /*background-color: rgb(231, 231, 231);*/
     height: 100vh;
 }
 
-.sidebar>Button{
+.signOut{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signOut>Button{
     background-color: turquoise;
-    min-width:50%;
+    /*min-width:20vw;*/
+    /*margin-left: auto;
+    margin-right: auto;*/
 }
