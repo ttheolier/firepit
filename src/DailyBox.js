@@ -22,8 +22,9 @@ const useStyles = makeStyles((theme) => ({
 
 function DailyBox({text,avat,username,name,date,url}) {
     const classes = useStyles();
-
-    return(
+    if (url == "")
+    {
+      return(
         <div className = "dailyBox">
                 <div className = "avatar">
                     <Avatar src = {avat} className={classes.large}>
@@ -35,11 +36,30 @@ function DailyBox({text,avat,username,name,date,url}) {
                   </div>
                   <div className = "text">
                       <p>{text}</p>
-                      <img className = "image"src={url} />
                   </div>
                 </div>
         </div>
     )
+    }
+    else{
+      return(
+          <div className = "dailyBox">
+                  <div className = "avatar">
+                      <Avatar src = {avat} className={classes.large}>
+                      </Avatar>
+                  </div>
+                  <div className = "rightBoxElements">
+                    <div className = "usernameTime">
+                      <p>@{username} {date}</p>
+                    </div>
+                    <div className = "text">
+                        <p>{text}</p>
+                        <img className = "image"src={url} alt = "" />
+                    </div>
+                  </div>
+          </div>
+      )
+    }
 }
 
 export default DailyBox;

@@ -147,6 +147,7 @@ function Profile(){
                         avat = {post.avatar}
                         date = {post.date}
                         username = {post.username}
+                        url = {post.url}
                         />
                     ))}
                 </div>
