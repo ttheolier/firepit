@@ -1,0 +1,62 @@
+[debug] [2021-04-26T00:13:03.337Z] ----------------------------------------------------------------------
+[debug] [2021-04-26T00:13:03.339Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tmt33\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2021-04-26T00:13:03.340Z] CLI Version:   9.10.0
+[debug] [2021-04-26T00:13:03.340Z] Platform:      win32
+[debug] [2021-04-26T00:13:03.340Z] Node Version:  v14.15.5
+[debug] [2021-04-26T00:13:03.341Z] Time:          Sun Apr 25 2021 17:13:03 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-04-26T00:13:03.341Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-26T00:13:03.347Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-26T00:13:03.347Z] > authorizing via signed-in user (tmt3324@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\tmt33\ReactJS\firepit
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using firepit-27712. 
+[debug] [2021-04-26T00:13:08.644Z] > refreshing access token with scopes: []
+[debug] [2021-04-26T00:13:08.646Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-26T00:13:08.876Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 26 Apr 2021 00:13:08 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-26T00:13:08.908Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firepit-27712 [none]
+[debug] [2021-04-26T00:13:09.222Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firepit-27712 200
+[debug] [2021-04-26T00:13:09.223Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firepit-27712 {"projectId":"firepit-27712","projectNumber":"294201251692","displayName":"FirePit","name":"projects/firepit-27712","resources":{"hostingSite":"firepit-27712","realtimeDatabaseInstance":"firepit-27712-default-rtdb","storageBucket":"firepit-27712.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2021-04-26T00:13:09.229Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-26T00:13:09.230Z] > authorizing via signed-in user (tmt3324@gmail.com)
+[debug] [2021-04-26T00:13:09.230Z] [iam] checking project firepit-27712 for permissions ["firebase.projects.get"]
+[debug] [2021-04-26T00:13:09.231Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-26T00:13:09.232Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-26T00:13:09.361Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 26 Apr 2021 00:13:08 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-26T00:13:09.383Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/firepit-27712:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-04-26T00:13:09.665Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 26 Apr 2021 00:13:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=178","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-26T00:13:09.668Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/firepit-27712/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2021-04-26T00:13:09.669Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/firepit-27712/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2021-04-26T00:13:10.133Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 26 Apr 2021 00:13:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-26T00:13:10.136Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 26 Apr 2021 00:13:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}

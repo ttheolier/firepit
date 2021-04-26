@@ -4,6 +4,7 @@ import ReactGiphySearchbox from "react-giphy-searchbox";
 import ReactDOM from "react-dom";
 import DailyBox from './DailyBox';
 import db from './firebase';
+import Button from '@material-ui/core/Button';
 
 function DailySpark() {
     const [posts, setPosts] = useState([]);
@@ -14,6 +15,34 @@ function DailySpark() {
         );
 
     }, []);
+
+    const showGifs = (e) => {
+        e.preventDefault();
+
+        var temp = document.getElementById("showGif");
+        temp.classList.remove('showGif');
+        temp.classList.add('hidden');
+        temp = document.getElementById("searchboxWrapper");
+        temp.classList.remove('hidden');
+        temp.classList.add('searchboxWrapper');
+        temp = document.getElementById("gifLookup");
+        temp.classList.remove('hidden');
+        temp.classList.add('gifLookup');
+    }
+
+    const hideGifs = (e) => {
+        e.preventDefault();
+
+        var temp = document.getElementById("showGif");
+        temp.classList.remove('hidden');
+        temp.classList.add('showGif');
+        temp = document.getElementById("searchboxWrapper");
+        temp.classList.remove('searchboxWrapper');
+        temp.classList.add('hidden');
+        temp = document.getElementById("gifLookup");
+        temp.classList.remove('gifLookup');
+        temp.classList.add('hidden');
+    }
     return (
         <div className="dailySpark">
             <div className="dsHeader">
@@ -35,8 +64,9 @@ function DailySpark() {
                 <div className="gifLogic">
                     < div className="gifHeader">
                         <h1>GIF Search</h1>
+                        <Button className = "showGif" id = "showGif" variant="contained" onClick = {showGifs}>Show Gifs</Button>
                     </div>
-                    <div className="searchboxWrapper">
+                    <div className= "hidden" id = "searchboxWrapper">
                         <ReactGiphySearchbox
                             className = "giphy"
                             gifListHeight = "150px"
@@ -60,8 +90,9 @@ function DailySpark() {
                             ]}
                         />
                     </div>
-                    <div className="gifLookup">
+                    <div className="hidden" id = "gifLookup">
                         <input type="submit" value="Submit" />
+                        <Button id = "hideGifs" className = "hideGifs" onClick = {hideGifs}>Hide Gifs</Button>
                     </div>
 
                 </div>

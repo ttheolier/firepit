@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-function DailyBox({text,avat,username,name,date}) {
+function DailyBox({text,avat,username,name,date,url}) {
     const classes = useStyles();
 
     return(
@@ -35,6 +35,7 @@ function DailyBox({text,avat,username,name,date}) {
                   </div>
                   <div className = "text">
                       <p>{text}</p>
+                      <img className = "image"src={url} />
                   </div>
                 </div>
         </div>

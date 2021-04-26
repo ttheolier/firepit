@@ -2,7 +2,9 @@ import React, {useState} from "react";
 import './AvatarBio.css';
 import Button from '@material-ui/core/Button';
 import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import db from "./firebase";
+import { render } from "@testing-library/react";
 
 function Avatar(){
     let history = useHistory();
@@ -29,12 +31,13 @@ function Avatar(){
             })
             .then(() => {
                 console.log("Bio successfully updated!");
-        });
+             });
         }
-
-        history.push("/profile")
+        /*return <Redirect to="/profile" />*/
+        
+        history.push("/home");
+        /*history.go(0);*/
     }
-
     return(
         <div className = "box">
             <p>Avatar Image URL</p>
@@ -46,6 +49,7 @@ function Avatar(){
             
         </div>
     )
+    
 }
 
 export default Avatar;

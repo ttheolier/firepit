@@ -131,7 +131,7 @@ function Profile(){
                       <div className = "changeAvatar">
                         <h1 id = "username"></h1>
                         <div className = "avatarButton">
-                            <Button style={{backgroundColor: "turquoise"}}/*color = "primary"*/variant = "contained" href = "avatarbio">change avatar</Button>
+                            <Button style={{backgroundColor: "turquoise"}}/*color = "primary"*/variant = "contained" href = "avatarbio">change avatar/bio</Button>
                           
                         </div>
                       </div>

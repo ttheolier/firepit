@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 function Spark({avatar}){
     const classes = useStyles();
     const [sparkMessage, setSparkMessage] = useState("");
+    const [sparkImage, setSparkImage] = useState("");
     var email = localStorage.getItem('user');
 
     const Post = (e) => {
@@ -45,7 +46,7 @@ function Spark({avatar}){
                 date: date,
                 email: email,
                 text: sparkMessage,
-                url: "",
+                url: sparkImage,
                 timestamp: firebase.firestore.Timestamp.now(),
                 username: doc.data().username,
               });
@@ -65,6 +66,7 @@ function Spark({avatar}){
       });*/
   
       setSparkMessage("");
+      setSparkImage("");
     };
 
     return(
@@ -76,6 +78,7 @@ function Spark({avatar}){
                     {/*<input placeholder = "Create your spark..." type></input>*/}
                     <textarea placeholder = "Create your spark..." name="text" rows="3" cols="10" wrap="soft" onChange={(e) => setSparkMessage(e.target.value)} value={sparkMessage}></textarea>
                 </div>
+                <textarea className = "imageURL" placeholder = "(Optional)Enter an image url..." rows="1" cols="10" onChange={(e) => setSparkImage(e.target.value)} value={sparkImage}></textarea>
                 <Button onClick = {Post}>Post</Button>
             </form>
 

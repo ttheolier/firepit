@@ -44,6 +44,7 @@ function Pit({auth}){
                         avat = {post.avatar}
                         date = {post.date}
                         username = {post.username}
+                        url = {post.url}
                         />
                     ))}
                 </div>
@@ -68,6 +69,7 @@ function Pit({auth}){
                         avat = {post.avatar}
                         date = {post.date}
                         username = {post.username}
+                        url = {post.url}
                         />
                     ))}
                 </div>
