@@ -17,7 +17,7 @@ function Home() {
       <Pit auth = {false}/>
 
       {/*DailySpark */}
-      <DailySpark />
+      <DailySpark auth = {false}/>
 
       </div>
     )
@@ -34,7 +34,7 @@ function Home() {
         <Pit auth = {true}/>
 
         {/*DailySpark */}
-        <DailySpark />
+        <DailySpark auth = {true}/>
       </div>
     );
   }

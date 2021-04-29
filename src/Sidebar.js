@@ -19,7 +19,7 @@ function Sidebar({auth}) {
 
         firebase.auth().signOut().then(() => {
             // Sign-out successful.
-            localStorage.clear();
+            localStorage.removeItem('user');
             history.push("/");
           }).catch((error) => {
             // An error happened.
@@ -49,7 +49,7 @@ function Sidebar({auth}) {
                 <SidebarSelect Icon = {InfoOutlinedIcon} text = "about" link = "about"/>
 
                 {/*Spark Button: placeholder currently */}
-                <SidebarSelect Icon={OfflineBoltOutlinedIcon} text = "spark" link = "spark"/>
+                {/*<SidebarSelect Icon={OfflineBoltOutlinedIcon} text = "spark" link = "spark"/>*/}
                 <div className = "signOut">
                 <Button variant = "contained" onClick = {Logout} fullWidth = {true}>logout</Button>
                 </div>

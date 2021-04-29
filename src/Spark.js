@@ -39,7 +39,8 @@ function Spark({avatar}){
       e.preventDefault();
       var date = new Date().toDateString();
       db.collection("accounts").doc(email).get().then((doc) => {
-          if (doc.exists) {
+          if (doc.exists &&(sparkMessage !== "")) {
+            document.getElementById("error").setAttribute("class","hidden3");
               console.log("Document data:", doc.data());
               db.collection("posts").add({
                 avatar: doc.data().avatar,
@@ -53,6 +54,9 @@ function Spark({avatar}){
           } else {
               // doc.data() will be undefined in this case
               console.log("No such document!");
+              document.getElementById("error").setAttribute("class","error");
+              //document.getElementById("error").classList.remove("hidden");
+              //document.getElementById("error").classList.add("error");
           }
       }).catch((error) => {
           console.log("Error getting document:", error);
@@ -79,8 +83,10 @@ function Spark({avatar}){
                     <textarea placeholder = "Create your spark..." name="text" rows="3" cols="10" wrap="soft" onChange={(e) => setSparkMessage(e.target.value)} value={sparkMessage}></textarea>
                 </div>
                 <textarea className = "imageURL" placeholder = "(Optional)Enter an image url..." rows="1" cols="10" onChange={(e) => setSparkImage(e.target.value)} value={sparkImage}></textarea>
+                <pre className = "hidden3" id = "error">Error: Please Input Text To Post</pre>
                 <Button onClick = {Post}>Post</Button>
             </form>
+            
 
         </div>
     );
