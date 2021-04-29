@@ -15,7 +15,18 @@ function DailySpark() {
         );
 
     }, []);
-
+    console.log(posts.length);
+    var date = new Date().toLocaleDateString();
+    if (localStorage.getItem('date') == null || !(localStorage.getItem('date')==date))
+    {
+        const min = 0;
+        const max = (posts.length);
+        const random = Math.floor(Math.random() * (max - min) + min);
+        localStorage.setItem('date', date);
+        localStorage.setItem('random', random);
+        console.log(random);
+    }
+    const daily = parseInt(localStorage.getItem('random'));
     const showGifs = (e) => {
         e.preventDefault();
 
@@ -50,12 +61,13 @@ function DailySpark() {
             </div>
             <div className="dsSpark">
                 {/*only getting the first, not a random one */}
-                {posts.slice(0, 1).map(post => (
+                {posts.slice(daily, daily+1).map(post => (
                     <DailyBox
                         text={post.text}
                         avat={post.avatar}
                         date={post.date}
                         username={post.username}
+                        url = {post.url}
                     />
                 ))}
             </div>
@@ -91,8 +103,8 @@ function DailySpark() {
                         />
                     </div>
                     <div className="hidden" id = "gifLookup">
-                        <input type="submit" value="Submit" />
-                        <Button id = "hideGifs" className = "hideGifs" onClick = {hideGifs}>Hide Gifs</Button>
+                        {/*<input type="submit" value="Submit" />*/}
+                        <Button id = "hideGifs" className = "hideGifs" variant="contained" onClick = {hideGifs}>Hide Gifs</Button>
                     </div>
 
                 </div>
