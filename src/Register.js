@@ -38,6 +38,7 @@ function Register(){
                 var errorMessage = error.message;
                 console.log(errorCode);
                 console.log(errorMessage);
+                alert(errorMessage);
                 // ..
             });
             /*db.collection("accounts").add({

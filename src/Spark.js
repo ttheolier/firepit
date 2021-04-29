@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import "./Spark.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
@@ -34,15 +34,27 @@ function Spark({avatar}){
     const [sparkMessage, setSparkMessage] = useState("");
     const [sparkImage, setSparkImage] = useState("");
     var email = localStorage.getItem('user');
+    const [posts, setPosts] = useState([]);
+    var numPosts;
 
+    useEffect(() => {
+        db.collection("posts").onSnapshot((snapshot) =>
+            setPosts(snapshot.docs.map((doc) => doc.data()))
+            /*numPosts = posts.length;*/
+        );
+    }, []);
+    numPosts = posts.length;
+    console.log(numPosts);
     const Post = (e) => {
       e.preventDefault();
+      /*numPosts = posts.length;
+      console.log(numPosts);*/
       var date = new Date().toDateString();
       db.collection("accounts").doc(email).get().then((doc) => {
           if (doc.exists &&(sparkMessage !== "")) {
             document.getElementById("error").setAttribute("class","hidden3");
               console.log("Document data:", doc.data());
-              db.collection("posts").add({
+              db.collection("posts").doc(numPosts.toString()).set({
                 avatar: doc.data().avatar,
                 date: date,
                 email: email,

@@ -10,6 +10,7 @@ function About({auth}){
             <div className = "about">
                 {/*Sidebar */}
                 <Sidebar auth = {false}/>
+                <body className = "back">
                 <div className = "about_description">
                     <h1>About Us</h1>
                     <p1>Firepit is a project developed by USC students as a short form 
@@ -21,6 +22,7 @@ function About({auth}){
                     Anthony Winney<br/>Rahel Yimenu
                     </p2>
                 </div>
+                </body>
             </div>
         )
     }
